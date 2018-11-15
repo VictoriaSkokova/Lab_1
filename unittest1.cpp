@@ -100,7 +100,7 @@ namespace UnitTest1
 			delete[]array2;
 		}
 
-		TEST_METHOD(unusial_1x5)
+		TEST_METHOD(unusual_1x5)
 		{
 			size_t n = 1, m = 5, k = 0;
 			size_t array1[5] = { 1, 2, 3, 4, 5 };
@@ -115,7 +115,7 @@ namespace UnitTest1
 			delete[]array2;
 		}
 
-		TEST_METHOD(unusial_5x1)
+		TEST_METHOD(unusual_5x1)
 		{
 			size_t n = 5, m = 1, k = 0;
 			size_t array1[5] = { 1, 2, 3, 4, 5 };
@@ -130,7 +130,7 @@ namespace UnitTest1
 			delete[]array2;
 		}
 
-		TEST_METHOD(unusial_1x1)
+		TEST_METHOD(unusual_1x1)
 		{
 			size_t n = 1, m = 1, k = 0;
 			size_t array1[1] = { 1 };
