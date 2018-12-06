@@ -3,6 +3,10 @@
 
 using namespace std;
 
+//Функция заполнениния массива работает следующим образом:
+//заполнение происходит по диагонали путем уменьшения j номера столбца и увеличения i номера строки, пока не дойдет до элемента с индексом j=j_0 (задает крайний левый столбец, необходимый для заполнения)
+//После того как заполнится крайний левый возможный элемент, переходим на новый символ, сравнивая i, j с максимумами. В случае совпадения, меняем начальные значения в цикле. Основной цикл происходит пока не будут заполнены все элементы.
+
 int put_array(size_t ** array, const size_t height, const size_t width, const size_t number)
 {
 	size_t k=number;
@@ -56,7 +60,9 @@ int put_array(size_t ** array, const size_t height, const size_t width, const si
 	return k;
 }
 
-void print_array (size_t ** array, const size_t height, const size_t width, const size_t k)
+// Функция, считающая значение для ровного вывода массива
+
+int for_print(const size_t height, const size_t width, const size_t k)
 {
 	size_t j, num = 0;
 	j = k + (width*height) - 1;
@@ -65,7 +71,12 @@ void print_array (size_t ** array, const size_t height, const size_t width, cons
 		j = j / 10;
 		num++;
 	}
-	cout << "\nЗаполненный массив: \n";
+	return num;
+}
+
+void print_array (size_t ** array, const size_t height, const size_t width, const size_t num)
+{
+
 	for (size_t i = 0; i < height; i++)
 	{
 		for (size_t j = 0; j < width; j++)
@@ -80,6 +91,7 @@ void print_array (size_t ** array, const size_t height, const size_t width, cons
 bool equals (const size_t* array1, const size_t array1_size, size_t ** array2, const size_t height, const size_t width)
 {
 
+	        cout << "\nЗаполненный массив: \n";
 		int i_1 = 0, j_1 = 0;
 		if (array1_size != (height* width)) return false;
 		for (size_t i = 0; i < array1_size; i++) 
