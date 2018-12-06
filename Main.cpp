@@ -13,7 +13,7 @@ int main()
 	cin >> height;
 	cout << "Столбцы: ";
 	cin >> width;
-	int beginning, l;
+	int beginning, l, size_print = 0;
 	cout << "Введите число, начиная с которого будет заполняться массив ";
 	cin >> l;
 
@@ -21,7 +21,8 @@ int main()
 	for (size_t i = 0; i < height; i++)
 		array[i] = new size_t[width];
 	beginning = put_array(array, height, width, l);
-	print_array(array, height, width, beginning);
+	size_print = for_print(height, width, beginning);
+	print_array(array, height, width, size_print);
 	for (size_t i = 0; i < height; i++)
 		delete[] array[i];
 	delete[]array;
