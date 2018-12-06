@@ -54,7 +54,21 @@ namespace UnitTest1
 				delete[] array2[i];
 			delete[]array2;
 		}
+		
+	        TEST_METHOD(function_for_print)
+		{
+			size_t n = 2, m = 5, k = 33;
+			size_t **array2 = new size_t*[n];
+			for (size_t i = 0; i < n; i++)
+				array2[i] = new size_t[m];
+			k = put_array(array2, n, m, 1);
+			Assert::IsFalse(for_print(2, 5, k) == 3);
 
+			for (size_t i = 0; i < n; i++)
+				delete[] array2[i];
+			delete[]array2;
+		}
+		
 		TEST_METHOD(equal_for_function_put)
 		{
 			size_t n = 2, m = 2, k = 0;
