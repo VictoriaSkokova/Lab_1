@@ -65,7 +65,7 @@ void print_array (size_t ** array, const size_t height, const size_t width, cons
 		j = j / 10;
 		num++;
 	}
-	cout << "\nÇàïîëíåííûé ìàññèâ: \n";
+	cout << "\nÐ—Ð°Ð¿Ð¾Ð»Ð½ÐµÐ½Ð½Ñ‹Ð¹ Ð¼Ð°ÑÑÐ¸Ð²: \n";
 	for (size_t i = 0; i < height; i++)
 	{
 		for (size_t j = 0; j < width; j++)
